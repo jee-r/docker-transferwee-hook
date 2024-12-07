@@ -35,6 +35,8 @@ RUN git clone https://github.com/iamleot/transferwee.git .
 # Stage 3: Create final image
 FROM python:3-alpine
 
+LABEL org.opencontainers.image.source = "https://github.com/jee-r/docker-transferwee-hook" 
+
 RUN pip install requests
 WORKDIR /app/transferwee
 

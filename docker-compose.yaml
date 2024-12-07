@@ -1,0 +1,7 @@
+services:
+  transferwee:
+    image: ghcr.io/jee-r/docker-transferwee-hook:latest
+    ports:
+      - 9000:9000
+    volumes:
+      - ./data:/data

@@ -1,0 +1,23 @@
+- id: "transferwee-download"
+  execute-command: "/app/transferwee/transferwee.py"
+  # command-working-directory: "/tmp"
+  # pass-file-to-command:
+  pass-arguments-to-command:
+    - source: "string"
+      name: "download"
+    - source: "payload"
+      name: "wetransfer-link"
+  # response-message: "I got the payload!"
+  include-command-output-in-response: true
+- id: "transferwee-getlink"
+  execute-command: "/app/transferwee/transferwee.py"
+  # command-working-directory: "/"
+  include-command-output-in-response: true
+  # pass-file-to-command:
+  pass-arguments-to-command:
+    - source: "string"
+      name: "download"
+    - source: "string"
+      name: "-g"
+    - source: "payload"
+      name: "wetransfer-link"
